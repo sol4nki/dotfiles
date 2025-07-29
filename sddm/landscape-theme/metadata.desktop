@@ -1,0 +1,11 @@
+[SddmGreeterTheme]
+Name=landscape-theme
+Description=customized theme
+Author=xyz
+Copyright=(c) 2025, xyz
+License=GPL 3+
+Type=sddm-theme
+Version=0.1
+MainScript=Main.qml
+ConfigFile=theme.conf
+QtVersion=6
