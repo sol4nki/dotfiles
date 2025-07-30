@@ -1,0 +1,84 @@
+/* Global settings */
+* {
+  border: none;
+  border-radius: 12px;
+  font-family: JetBrainsMono Nerd Font, monospace;
+  font-size: 13px;
+  min-height: 0;
+  padding: 0 10px;
+}
+
+window#waybar {
+  background: rgba(12, 12, 16, 0.7);
+  border-radius: 16px;
+  color: #cdd6f4;
+  margin: 6px 10px;
+  transition: background 0.3s ease-in-out;
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Module spacing */
+.modules-left > *:not(:last-child),
+.modules-center > *:not(:last-child),
+.modules-right > *:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Custom hover effect */
+#custom-logo:hover,
+#custom-power:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#clock:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.2s ease;
+}
+
+/* Workspaces */
+#workspaces button {
+  padding: 0 6px;
+  color: #89b4fa;
+  background: transparent;
+  border-radius: 8px;
+  margin: 2px 4px;
+  transition: background 0.2s ease;
+}
+
+#workspaces button.focused {
+  background: rgba(137, 180, 250, 0.2);
+  color: #ffffff;
+}
+
+#workspaces button.urgent {
+  background: #f38ba8;
+  color: #11111b;
+}
+
+/* Tray icons */
+#tray > .item {
+  padding: 0 4px;
+}
+
+/* Modules */
+#clock, #battery, #network, #pulseaudio, #custom-cpu, #custom-ram, #custom-power, #custom-logo {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 4px 10px;
+}
+
+#battery.warning {
+  background-color: rgba(255, 165, 0, 0.2);
+  color: #ffaa44;
+}
+
+#battery.critical {
+  background-color: rgba(255, 0, 0, 0.3);
+  color: #ff5555;
+}
+
+/* Animation */
+#clock, #battery, #pulseaudio {
+  transition: background 0.3s, color 0.3s;
+}
