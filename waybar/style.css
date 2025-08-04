@@ -3,13 +3,16 @@
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
 }
-
+#window {
+    padding-left: 8px;
+}
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
     border-bottom: 2px solid rgba(100, 114, 125, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
+
 }
 
 window#waybar.hidden {
@@ -52,32 +55,49 @@ button:hover {
     background-color: #a37800;
 }
 
+#workspaces {
+  padding: 0;
+  margin: 0;
+}
+
 #workspaces button {
-    padding: 1px 1px;
-    margin: 2px 2px;
-    background-color: transparent;
-    border: 1px solid rgba(256,256,256, 0.4);
-    border-radius: 200px;
-    color: #ffffff;
+  padding: 4px 8px;
+  margin: 0 2px;
+  background-color: transparent;
+  color: #c0c0c0;
+  font-weight: 500;
+  font-size: 12px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-bottom 0.2s, background-color 0.2s;
 }
 
 #workspaces button:hover {
-    box-shadow: inherit;
-    text-shadow: inherit;
-    background-color: rgba(256, 256, 256, 0.1);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 #workspaces button.active {
-    background-color: rgba(256, 256, 256, 0.2);
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
 }
 
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  color: #ffffff;
+  background-color: #ff4444;
+  border-bottom: 2px solid #ff4444;
 }
 
 #mode {
-    background-color: rgba(256, 256, 256, 0.2);
+  background-color: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 4px 10px;
+  margin-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
+
 
 #clock,
 #battery,
@@ -104,6 +124,15 @@ button:hover {
 #workspaces {
     margin: 0 4px;
 }
+
+
+#custom-power {
+  padding-right: 8px;
+}
+
+
+
+
 /* 
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
